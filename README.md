@@ -7,7 +7,9 @@ SQL Structure
 =====
 
 Do this to the database
-    "CREATE TABLE `items` (
+
+
+    CREATE TABLE `items` (
       `item` int(11) NOT NULL COMMENT 'Item ID',
       `datavalue` smallint(6) NOT NULL COMMENT 'Data Value',
       `buyprice` bigint(20) NOT NULL COMMENT 'Buy Price',
