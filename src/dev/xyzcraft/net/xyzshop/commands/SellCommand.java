@@ -45,7 +45,7 @@ public class SellCommand extends MacCommand{
                     continue;
                 }
                 MSTransaction ts = new MSTransaction(itemStack1.getAmount(),item,MSTransactionType.SELL,cs);
-                if (ts.getPrice() < 1) {
+                if (ts.getPrice() < 0.01) {
                     continue;
                 }
                 if (plugin.shop.commit(ts)) {
@@ -71,7 +71,7 @@ public class SellCommand extends MacCommand{
                 return MacCommandStatus.SUCESSFUL;
             }
             MSTransaction ts = new MSTransaction(hand.getAmount(),item,MSTransactionType.SELL,cs);
-            if (ts.getPrice() < 1) {
+            if (ts.getPrice() < 0.01) {
                cs.sendMessage(ChatColor.RED + "You need to have more of this item to sell it. Do /worth for info on this object");
                return MacCommandStatus.SUCESSFUL;
             }
