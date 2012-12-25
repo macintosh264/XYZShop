@@ -10,7 +10,6 @@ import dev.xyzcraft.net.xyzshop.dataObject.MSTransaction;
 import dev.xyzcraft.net.xyzshop.dataObject.MSTransactionType;
 import dev.xyzcraft.net.xyzshop.util.MacCommand;
 import dev.xyzcraft.net.xyzshop.util.MacCommandStatus;
-import java.util.HashSet;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.entity.Player;

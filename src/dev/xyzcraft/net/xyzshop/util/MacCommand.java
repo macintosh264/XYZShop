@@ -4,7 +4,6 @@
  */
 package dev.xyzcraft.net.xyzshop.util;
 
-import dev.xyzcraft.net.database.DatabaseHandler;
 import dev.xyzcraft.net.xyzshop.XYZShop;
 import java.util.logging.Level;
 import java.util.logging.Logger;

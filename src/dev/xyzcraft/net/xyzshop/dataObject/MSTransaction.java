@@ -4,7 +4,6 @@
  */
 package dev.xyzcraft.net.xyzshop.dataObject;
 
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
