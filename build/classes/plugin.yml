@@ -1,0 +1,69 @@
+name: XYZShop
+version: 0.1.3
+website: http://xyzcraft.net
+description: XYZ's custom shop plugin
+authors: [macintosh264, Peragore]
+main: dev.xyzcraft.net.xyzshop.XYZShop
+depend: [Vault]
+commands:
+  shop:
+    description: The XYZ Shop Main Command
+    usage: /shop <subcommand> [args]
+    permission: xyzshop.shop
+    permission-message: No Permission.
+  buy:
+    description: Easy Buy Command
+    usage: /buy <item> <quantity>
+    permission: xyzshop.buy
+    permission-message: No permission.
+  sell:
+    description: Easy Sell Command
+    usage: /sell <hand|inv|item> [if-item:<quantity>]
+    permission: xyzshop.sell
+    permission-message: No permission.
+  worth:
+    description: Worth of an object in hand
+    usage: /worth
+    permission: xyzshop.worth
+    permission-message: No permission.
+permissions:
+  xyzshop.shop:
+    description: Access to /shop
+    default: false
+  xyzshop.buy:
+    description: Access /buy
+    default: false
+  xyzshop.sell:
+    description: Access to /sell
+    default: false
+  xyzshop.worth:
+    description: Access to /worth
+    default: false
+  xyzshop.admin.reload:
+    default: false
+    description: Reload the config, and start new DB Connections
+  xyzshop.item:
+    descritpion: Item permissions.
+    default: false
+  xyzshop.item.*:
+    description: All Item Permissions
+    default: false
+  xyzshop.*:
+    description: All XYZ Shop including admin
+    default: op
+    children:
+      - xyzshop.buy
+      - xyzshop.shop
+      - xyzshop.sell
+      - xyzshop.worth
+      - xyzshop.admin.reload
+      - xyzshop.item.*
+  xyzshop.player:
+    description: All XYZ Shop for players
+    default: true
+    children:
+      - xyzshop.buy
+      - xyzshop.shop
+      - xyzshop.sell
+      - xyzshop.worth
+      - xyzshop.item.*
