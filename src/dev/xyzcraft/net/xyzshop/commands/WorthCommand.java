@@ -24,7 +24,14 @@ public class WorthCommand extends MacCommand{
     @Override
     public MacCommandStatus onCommand(Player cs, Command cmnd, String label, String[] args) {
         ItemStack inhand = cs.getItemInHand();
-        MSItem item = this.plugin.database.getItem(inhand.getTypeId(), inhand.getDurability());
+        MSItem item = null;
+        if (plugin.db) {
+            item = this.plugin.database.getItem(inhand.getTypeId(), inhand.getDurability());
+        }
+        if (item == null && !plugin.db) {
+            cs.sendMessage(ChatColor.RED + "Database error");
+            return MacCommandStatus.FAILED;
+        }
         if (item == null) {
             cs.sendMessage(ChatColor.RED + "This item is not in the store.");
             return MacCommandStatus.SUCESSFUL;
