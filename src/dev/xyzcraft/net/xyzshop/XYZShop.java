@@ -4,7 +4,7 @@
  */
 package dev.xyzcraft.net.xyzshop;
 
-import dev.xyzcraft.net.database.DatabaseHandler;
+import dev.xyzcraft.net.shopDatabase.DatabaseHandler;
 import dev.xyzcraft.net.xyzshop.commands.BuyCommand;
 import dev.xyzcraft.net.xyzshop.commands.SellCommand;
 import dev.xyzcraft.net.xyzshop.commands.ShopCommand;

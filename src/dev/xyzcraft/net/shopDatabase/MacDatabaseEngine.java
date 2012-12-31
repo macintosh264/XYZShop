@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package dev.xyzcraft.net.database;
+package dev.xyzcraft.net.shopDatabase;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  *
  * @author Joey
  */
-public abstract class MacDatabaseEngine {
+public class MacDatabaseEngine {
         private MySQLConnectionPool sqlConnections;
     public MacDatabaseEngine(String url,String username, String password) throws SQLException{
         try {

@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package dev.xyzcraft.net.database;
+package dev.xyzcraft.net.shopDatabase;
 
 import dev.xyzcraft.net.xyzshop.dataObject.MSItem;
 import java.sql.ResultSet;

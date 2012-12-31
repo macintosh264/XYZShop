@@ -1,4 +1,4 @@
-package dev.xyzcraft.net.database;
+package dev.xyzcraft.net.shopDatabase;
 
 /*
  * To change this template, choose Tools | Templates
