@@ -48,7 +48,7 @@ public class ShopCommand extends MacCommand{
             return MacCommandStatus.UNSUPPORTED;
         }*/
         if (args.length >= 1) {
-            if (args[0].equals("reload")) {
+            if (args[0].equalsIgnoreCase("reload")) {
                 return MacCommandStatus.UNSUPPORTED;
             } 
         }

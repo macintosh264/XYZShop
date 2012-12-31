@@ -32,7 +32,7 @@ public class SellCommand extends MacCommand{
         }
         String sellType = args[0];
         PlayerInventory inv = cs.getInventory();
-        if (sellType.equals("inv") || sellType.equals("all") || sellType.equals("inventory")) {
+        if (sellType.equalsIgnoreCase("inv") || sellType.equalsIgnoreCase("all") || sellType.equalsIgnoreCase("inventory")) {
             ItemStack[] invItems = inv.getContents();
             float total = 0;
             for (ItemStack itemStack1 : invItems) {
@@ -58,7 +58,7 @@ public class SellCommand extends MacCommand{
             cs.sendMessage(ChatColor.GREEN + "$" + String.format("%.2f", total) + " added to your account!");
             return MacCommandStatus.SUCESSFUL;
         }
-        else if (sellType.equals("hand") || sellType.equals("this")) {
+        else if (sellType.equalsIgnoreCase("hand") || sellType.equalsIgnoreCase("this")) {
             ItemStack hand = inv.getItemInHand();
             MSItem item = this.plugin.database.getItem(hand.getTypeId(), hand.getDurability());
             if (item == null) {

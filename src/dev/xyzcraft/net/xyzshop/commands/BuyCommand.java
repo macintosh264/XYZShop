@@ -20,7 +20,11 @@ public class BuyCommand extends MacCommand{
     }
     @Override
     public MacCommandStatus onCommand(Player cs, Command cmnd, String label, String[] args) {
-        return MacCommandStatus.UNSUPPORTED;
+        sendhelp(cs);
+        return MacCommandStatus.SUCESSFUL;
+    }
+    public void sendhelp(Player cs) {
+        
     }
 
   

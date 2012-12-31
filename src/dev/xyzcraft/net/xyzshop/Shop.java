@@ -7,6 +7,7 @@ package dev.xyzcraft.net.xyzshop;
 import dev.xyzcraft.net.xyzshop.dataObject.MSTransaction;
 import dev.xyzcraft.net.xyzshop.util.MacCommandStatus;
 import java.util.HashMap;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
@@ -48,6 +49,7 @@ public class Shop {
                      HashMap rv = inv2.addItem(ts.items());
                      try {
                         if (!rv.isEmpty()) {
+                            ts.player.sendMessage(ChatColor.DARK_RED + "Inventory full, dropping item on ground.");
                             for (Object iso : rv.values()) {
                                 ItemStack is = null;
                                 if (iso instanceof ItemStack) {
@@ -69,14 +71,5 @@ public class Shop {
          else {
              return false;
          }
-    }
-    public MacCommandStatus handleBuyCommand(String[] args, Player cs) {
-        return MacCommandStatus.SUCESSFUL;
-    }
-    public MacCommandStatus handleSellCommand(String[] args, Player cs) {
-        return MacCommandStatus.SUCESSFUL;
-    }
-    public MacCommandStatus handleShopCommand(String[] args, Player cs) {
-        return MacCommandStatus.SUCESSFUL;
     }
 }
